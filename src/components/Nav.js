@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './Nav.scss';
 
 const Nav = ({ user, logIn }) => {
   const [newUser, setNewUser] = useState('');
