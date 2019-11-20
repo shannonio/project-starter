@@ -7,11 +7,15 @@ const Nav = ({ user, logIn }) => {
   const handleInputChange = e => setNewUser(e.target.value);
 
   return (
-    <p>
-      Welcome! { user.name }
-      <input onChange={handleInputChange} value={newUser} />
-      <button onClick={() => logIn(newUser)}>Log In!</button>
-    </p>
+    <div className="Nav">
+      Welcome { user.name }
+      { !user.name && (
+        <div className="login-form">
+          <input onChange={handleInputChange} value={newUser} />
+          <button onClick={() => logIn(newUser)}>Log In!</button>
+        </div>
+      )}
+    </div>
   );
 }
 
